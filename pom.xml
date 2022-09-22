@@ -12,6 +12,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>java</sonar.language>
+    <property name="sonar.login" value="bcdecf4f4e4565892eef6ad84d6a6c7ede4f8bbf" />
   </properties>
 
   <dependencies>
