@@ -8,7 +8,7 @@ node{
     archive 'target/*.jar'
   }
   stage('Static Code Analysys'){
-    sh 'mvn clean verify sonar:sonar -Dsonar.projectName=example-project -Dsonar.projectKey=example-project -Dsonar.projectVersion=$BUILD_NUMBER';
+    sh 'mvn clean verify sonar:sonar -Dsonar.projectName=example-project -Dsonar.projectKey=example-project -Dsonar.login=bcdecf4f4e4565892eef6ad84d6a6c7ede4f8bbf -Dsonar.projectVersion=$BUILD_NUMBER';
   }
   stage ('Integration Test'){
     sh 'mvn clean verify -Dsurefire.skip=true';
