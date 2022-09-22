@@ -15,7 +15,7 @@ node{
     junit '**/target/failsafe-reports/TEST-*.xml'
     archive 'target/*.jar'
   }
-  stage ('Publish'){
+  /*stage ('Publish'){
     def server = Artifactory.server 'Default Artifactory Server'
     def uploadSpec = """{
       "files": [
@@ -27,5 +27,5 @@ node{
        ]
       }"""
       server.upload(uploadSpec)
-    }
+    }*/
   }
