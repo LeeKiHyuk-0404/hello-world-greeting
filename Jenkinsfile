@@ -7,7 +7,7 @@ node{
     junit '**/target/surefire-reports/TEST-*.xml'
     archive 'target/*.jar'
   }
-  stage('Stage Code Analysys'){
+  stage('Static Code Analysys'){
     sh 'mvn clean verify sonar:sonar -Dsonar.projectName=example-project -Dsonar.projectKey=example-project -Dsonar.projectVersion=$BUILD_NUMBER';
   }
   stage ('Integration Test'){
