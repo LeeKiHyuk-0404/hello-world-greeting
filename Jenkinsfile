@@ -28,7 +28,7 @@ node{
       }"""
       server.upload(uploadSpec)
     }*/
-  node('docker_pt') {
+  node {
     stage ('Start Tomcat'){
       sh '''cd /home/jenkins/tomcat/bin
       ./startup.sh''';
@@ -52,3 +52,4 @@ node{
         }
     }*/
   }
+}
