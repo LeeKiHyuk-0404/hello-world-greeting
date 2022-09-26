@@ -12,7 +12,7 @@ node {
     -Dsonar.projectKey=example-project -Dsonar.projectVersion=$BUILD_NUMBER';
   }*/
   stage ('Integration Test'){
-    sh 'mvn clean verify -Dsurefire.skip=true';
+    //sh 'mvn clean verify -Dsurefire.skip=true';
     junit '**/target/failsafe-reports/TEST-*.xml'
     archive 'target/*.jar'
   }
